@@ -6,13 +6,13 @@ const Content = () => {
     const [items, setItems] = useState([
         {
             id: 1,
-            checked: true,
+            checked: false,
             item: "Item 1"
         },
         {
             id: 2,
             checked: false,
-            item: "Item 3"
+            item: "Item 2"
         },
         {
             id: 3,
@@ -22,7 +22,9 @@ const Content = () => {
     ]);
 
     const handleCheck = (id) => {
-        console.log(`key: ${id}`)
+        // console.log({item: id})
+        const listItems = items.map((item) => item.id === id ? { ...item, checked: !item.checked } : item);
+        setItems(listItems);
     }
 
     return (
