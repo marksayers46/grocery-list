@@ -22,9 +22,10 @@ const Content = () => {
     ]);
 
     const handleCheck = (id) => {
-        // console.log({item: id})
+        console.log(`key: ${id}`)
         const listItems = items.map((item) => item.id === id ? { ...item, checked: !item.checked } : item);
         setItems(listItems);
+        localStorage.setItem('shoppingList', JSON.stringify(listItems));
     }
 
     return (
