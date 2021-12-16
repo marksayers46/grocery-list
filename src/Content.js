@@ -22,8 +22,15 @@ const Content = () => {
     ]);
 
     const handleCheck = (id) => {
-        console.log(`key: ${id}`)
+        // console.log(`key: ${id}`)
         const listItems = items.map((item) => item.id === id ? { ...item, checked: !item.checked } : item);
+        setItems(listItems);
+        localStorage.setItem('shoppingList', JSON.stringify(listItems));
+    }
+
+    const handleDelete = (id) => {
+        // console.log(id)
+        const listItems = items.filter((item) => item.id !== id);
         setItems(listItems);
         localStorage.setItem('shoppingList', JSON.stringify(listItems));
     }
@@ -34,12 +41,16 @@ const Content = () => {
                 {items.map((item) => (
                     <li className="item" key={item.id}>
                         <input
-                        type="checkbox"
-                        onChange={() => handleCheck(item.id)}
-                        checked={item.checked}
+                            type="checkbox"
+                            onChange={() => handleCheck(item.id)}
+                            checked={item.checked}
                         />
-                        <label>{item.item}</label>
-                        <FaTrashAlt 
+                        <label
+                            style={(item.checked) ? { textDecoration:'line-through' } : null}
+                            onDoubleClick={() => handleCheck(item.id)}
+                        >{item.item}</label>
+                        <FaTrashAlt
+                            onClick={() => handleDelete(item.id)} 
                             role="button" 
                             tabIndex="0" 
                         />
