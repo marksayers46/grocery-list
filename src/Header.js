@@ -13,5 +13,5 @@ Header.defaultProps = {
     title: "Default Title"
 }
 
-export default Header
+export default Header;
 

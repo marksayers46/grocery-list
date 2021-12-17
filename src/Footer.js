@@ -12,4 +12,4 @@ const Footer = ({ length }) => {
 }
 
 
-export default Footer
+export default Footer;
