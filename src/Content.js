@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import ItemList from './ItemList';
 
 const Content = ({ items, handleCheck, handleDelete }) => {
