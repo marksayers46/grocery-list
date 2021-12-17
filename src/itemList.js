@@ -29,4 +29,3 @@ const ItemList = ({ items, handleCheck, handleDelete }) => {
 }
 
 export default ItemList;
-
