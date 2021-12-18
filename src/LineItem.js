@@ -11,7 +11,7 @@ const LineItem = ({ item, handleCheck, handleDelete }) => {
                 onChange={() => handleCheck(item.id)}
                 checked={item.checked}
             />
-            <label
+            <label 
                 style={(item.checked) ? { textDecoration:'line-through' } : null}
                 onDoubleClick={() => handleCheck(item.id)}
             >{item.item}</label>

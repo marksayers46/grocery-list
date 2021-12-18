@@ -115,6 +115,10 @@ item:first-child {
   outline: none;
 }
 
+.addForm {
+  width: 100%;
+}
+
 
 
 
