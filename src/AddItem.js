@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaTrashAlt } from 'react-icons/fa';
+import { FaPlus } from 'react-icons/fa';
 
 const AddItem = () => {
     
@@ -18,7 +18,7 @@ const AddItem = () => {
                 type='submit'
                 aria-label='Add Item'
             >
-                <FaTrashAlt />     
+                <FaPlus />     
             </button>    
         </form>
     )
