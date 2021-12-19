@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaPlus } from 'react-icons/fa';
 
-const AddItem = ({ handleSubmit }) => {
+const AddItem = ({ newItem, setNewItem, handleSubmit }) => {
     
     
     return (
