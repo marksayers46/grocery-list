@@ -22,6 +22,7 @@ function App() {
           item: "Item 3"
       }
   ]);
+  const [newItem, setNewItem] = useState('')
 
   const handleCheck = (id) => {
     // console.log(`key: ${id}`)
@@ -37,11 +38,19 @@ function App() {
     localStorage.setItem('shoppingList', JSON.stringify(listItems));
   }
 
+  const handleSubmit = (e) => {
+    console.log('Submitted')
+  }
+
 
   return (
     <div className="App">
       <Header title="Grocery List" />
-      <AddItem />
+      <AddItem 
+        newItem={newItem}
+        setNewItem={setNewItem}
+        handleSubmit={handleSubmit}
+      />
       <Content 
         items={items}
         handleCheck={handleCheck}

@@ -133,7 +133,7 @@ but screen readers for accessibility will will */
 
 .addForm input[type='text'] {
   flex-grow: 1;
-  max-width: calc(100% - 50%);
+  max-width: calc(100% - 50px);
   min-height: 48px;
   font-size: 1rem;
   padding: 0.25rem;
