@@ -3,7 +3,7 @@ import { FaPlus } from 'react-icons/fa';
 
 const AddItem = ({ newItem, setNewItem, handleSubmit }) => {
     
-    
+    // made AddItem a controlled component by giving our input one source of truth
     return (
         <form className="addForm">
             <label htmlFor='addItem'>AddItem</label>
@@ -13,6 +13,8 @@ const AddItem = ({ newItem, setNewItem, handleSubmit }) => {
             type='text'
             placeholder='Add Item'
             required
+            value={newItem}
+            onChange={(e) => setNewItem(e.target.value)}
             />
             <button
                 onClick={() => handleSubmit()}
