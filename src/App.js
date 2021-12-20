@@ -14,7 +14,7 @@ function App() {
   }
 
   const addItem = (item) => {
-    const id = item.length ? items[items.length - 1].id + 1 : 1;
+    const id = items.length ? items[items.length - 1].id + 1 : 1;
     const myNewItem = { id, checked: false, item };
     const listItems = [...items, myNewItem];
     setAndSavedItems(listItems);
