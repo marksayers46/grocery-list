@@ -24,22 +24,36 @@ function App() {
   ]);
   const [newItem, setNewItem] = useState('')
 
+  const setAndSavedItems = (newItems) => {
+    setItems(newItems);
+    localStorage.setItem('shoppingList', JSON.stringify(newItems));
+  }
+
+  const addItem = (item) => {
+    const id = item.length ? items[items.length - 1].id + 1 : 1;
+    const myNewItem = { id, checked: false, item };
+    const listItems = [...items, myNewItem];
+    setAndSavedItems(listItems);
+  }
+
   const handleCheck = (id) => {
-    // console.log(`key: ${id}`)
+    //console.log(`key: ${id}`)
     const listItems = items.map((item) => item.id === id ? { ...item, checked: !item.checked } : item);
-    setItems(listItems);
-    localStorage.setItem('shoppingList', JSON.stringify(listItems));
+    setAndSavedItems(listItems);
   }
 
   const handleDelete = (id) => {
-    // console.log(id)
+    //console.log(id)
     const listItems = items.filter((item) => item.id !== id);
-    setItems(listItems);
-    localStorage.setItem('shoppingList', JSON.stringify(listItems));
+    setAndSavedItems(listItems)
   }
 
   const handleSubmit = (e) => {
-    console.log('Submitted')
+    e.preventDefault();
+    if(!newItem) return;
+    //console.log(newItem)
+    addItem(newItem);
+    setNewItem('');
   }
 
 
