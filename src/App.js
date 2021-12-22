@@ -5,7 +5,7 @@ import AddItem from './AddItem';
 import { useState } from 'react';
 
 function App() {
-    const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppingList')));
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppingList')));
   const [newItem, setNewItem] = useState('')
 
   const setAndSavedItems = (newItems) => {
