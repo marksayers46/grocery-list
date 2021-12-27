@@ -125,7 +125,7 @@ item:first-child {
 }
 
 /* placed so far left so it can't be seen
-but screen readers for accessibility will will */ 
+but screen readers for accessibility will read it */ 
 .addForm label {
   position: absolute;
   left:-99999px;
