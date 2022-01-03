@@ -43,6 +43,7 @@ function App() {
     const listItems = [...items, myNewItem];
     setItems(listItems);
 
+
     const postOptions = {
       method: 'POST',
       headers: {
@@ -58,6 +59,7 @@ function App() {
     //console.log(`key: ${id}`)
     const listItems = items.map((item) => item.id === id ? { ...item, checked: !item.checked } : item);
     setItems(listItems);
+
 
     const myItem = listItems.filter((item) => item.id === id);
     const updateOptions = {
@@ -77,6 +79,7 @@ function App() {
     const listItems = items.filter((item) => item.id !== id);
     setItems(listItems);
 
+    
    const deleteOptions = { method: 'DELETE'};
    const reqUrl = `${API_URL}/${id}`;
    const result = await apiRequest(reqUrl, deleteOptions);
