@@ -1,1 +1,1 @@
-My ItemList component is not showing correctly on my GitHub. It's showing up as "itemList" on GitHub and I have it as ItemList in my local machine. I will work on app documentation after I get more of the app completed.
+My ItemList component is not showing correctly on my GitHub. It's showing up as "itemList" on GitHub and I have it as ItemList in my local machine. Completed my grocery list app but still need to troubleshoot itemList component showing up wrong on GitHub.
