@@ -8,6 +8,7 @@ import apiRequest from './apiRequest';
 
 
 function App() {
+  // npx json-server -p 3500 -w data/db.json
   const API_URL = 'http://localhost:3500/items';
 
   const [items, setItems] = useState([]);
